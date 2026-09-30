@@ -1,23 +1,19 @@
 package package1;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Video_56_invisibiltyOfElementLocatedCommand {
 	
 	@Test(enabled=true)
 	public void f1() throws Exception {
 		
-		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		
@@ -26,7 +22,7 @@ public class Video_56_invisibiltyOfElementLocatedCommand {
 		//It is a element specific wait
 		driver.get("http://omayo.blogspot.com/");
 		
-		WebDriverWait wait=new WebDriverWait(driver, 25);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
 		
 	    WebElement Thistextwilldisappear=driver.findElement(By.id("deletesuccess"));
 	    wait.until(ExpectedConditions.invisibilityOf(Thistextwilldisappear));   //It will wait till 25 seconds to invisbile the item from the web page

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6626" started-at="2022-12-02T23:12:43 IST" finished-at="2022-12-02T23:12:50 IST">
+  <suite started-at="2026-09-30T22:23:43 IST" name="Default suite" finished-at="2026-09-30T22:23:50 IST" duration-ms="6719">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6626" started-at="2022-12-02T23:12:43 IST" finished-at="2022-12-02T23:12:50 IST">
+    <test started-at="2026-09-30T22:23:43 IST" name="Default test" finished-at="2026-09-30T22:23:50 IST" duration-ms="6719">
       <class name="package1.Video_78_deleteAllCookiesCommand">
-        <test-method status="PASS" signature="f1()[pri:0, instance:package1.Video_78_deleteAllCookiesCommand@2173f6d9]" name="f1" duration-ms="6591" started-at="2022-12-02T23:12:43 IST" finished-at="2022-12-02T23:12:50 IST">
+        <test-method signature="f1()[pri:0, instance:package1.Video_78_deleteAllCookiesCommand@15eb5ee5]" started-at="2026-09-30T22:23:43 IST" name="f1" finished-at="2026-09-30T22:23:50 IST" duration-ms="6680" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f1 -->

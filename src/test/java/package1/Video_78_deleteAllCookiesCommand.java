@@ -12,14 +12,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Video_78_deleteAllCookiesCommand {
 	
 	@Test(enabled=true)
 	public void f1() throws Exception {
 		
-		WebDriverManager.chromedriver().setup();
+		
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		
@@ -27,6 +26,13 @@ public class Video_78_deleteAllCookiesCommand {
 			
 	    //deleteAllCookies() command to delete all the cookies in the current session from the browser
 		 driver.manage().deleteAllCookies();
+		 
+		 Set<Cookie> cookies=driver.manage().getCookies();
+		 
+		 for(Cookie c:cookies) {
+			 
+			 System.out.println(c.getName() +" "+c.getValue());
+		 }
 	
 		Thread.sleep(2000);
 		//driver.quit();

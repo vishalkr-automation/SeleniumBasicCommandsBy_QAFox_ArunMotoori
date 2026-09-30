@@ -1,25 +1,20 @@
 package package1;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Video_58_isAlertPresent_Command {
 	
 	@Test(enabled=true)
 	public void f1() throws Exception {
 		
-		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		
@@ -31,7 +26,7 @@ public class Video_58_isAlertPresent_Command {
 		//if selenium will perform any action without coming alert it will throw exception alert 
 		Alert alert=driver.switchTo().alert();
 		
-		WebDriverWait wait=new WebDriverWait(driver, 10);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.alertIsPresent());
 		
 		String textOfAlert=alert.getText();

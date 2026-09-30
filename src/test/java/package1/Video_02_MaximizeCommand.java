@@ -4,14 +4,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Video_02_MaximizeCommand {
 	
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void f1() {
 		
-		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		//It will maximize the browser
 		driver.manage().window().maximize();

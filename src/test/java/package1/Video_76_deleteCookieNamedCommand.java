@@ -12,14 +12,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 public class Video_76_deleteCookieNamedCommand {
 	
 	@Test(enabled=true)
 	public void f1() throws Exception {
 		
-		WebDriverManager.chromedriver().setup();
+	
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		
@@ -27,6 +27,12 @@ public class Video_76_deleteCookieNamedCommand {
 			
 	    //deleteCookieNamed() command to delete a particular cookie details
 		driver.manage().deleteCookieNamed("OCSESSID");
+		
+		Set<Cookie> cookies=driver.manage().getCookies();
+		
+		for(Cookie c:cookies) {
+			System.out.println(c.getName() +" " + c.getValue());
+		}
 		
 		Thread.sleep(2000);
 		//driver.quit();

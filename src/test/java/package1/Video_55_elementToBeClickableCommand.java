@@ -1,23 +1,19 @@
 package package1;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Video_55_elementToBeClickableCommand {
 	
 	@Test(enabled=true)
 	public void f1() throws Exception {
 		
-		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		
@@ -27,7 +23,7 @@ public class Video_55_elementToBeClickableCommand {
 		//It is a element specific wait
 		driver.get("http://omayo.blogspot.com/");
 		
-		WebDriverWait wait=new WebDriverWait(driver, 15);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
 		
 		//Thread.sleep(2000);
 	    driver.findElement(By.xpath("//button[text()='Check this']")).click();

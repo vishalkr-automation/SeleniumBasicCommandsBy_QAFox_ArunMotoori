@@ -4,14 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class Video_03_FullScreenCommand {
 	
 	@Test(enabled=true)
 	public void f1() throws Exception {
 		
-		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		
 		//It will open the browser
@@ -28,7 +25,6 @@ public class Video_03_FullScreenCommand {
 	@Test(enabled=false)
 	public void f2() {
 		
-		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
 		
 		//Will throw the exception because we are not using https   - org.openqa.selenium.InvalidArgumentException: invalid argument

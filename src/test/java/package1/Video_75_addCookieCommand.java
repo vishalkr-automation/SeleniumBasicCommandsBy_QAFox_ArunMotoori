@@ -12,14 +12,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Video_75_addCookieCommand {
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void f1() throws Exception {
-		
-		WebDriverManager.chromedriver().setup();
+	
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		
@@ -30,6 +28,28 @@ public class Video_75_addCookieCommand {
 		
 		driver.manage().addCookie(cookie);
 	
+		Thread.sleep(2000);
+		//driver.quit();
+			
+	} 
+	
+	@Test(enabled=true)
+	public void f2() throws Exception {
+	
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		
+		driver.get("http://www.tutorialsninja.com/demo/");
+			
+        Cookie cookie=new Cookie("Name","Arun");
+		
+		driver.manage().addCookie(cookie);
+		
+		// Ab cookies print karo
+		Set<Cookie> cookies = driver.manage().getCookies();
+		for (Cookie c : cookies) {
+		    System.out.println(c.getName() + " = " + c.getValue());
+		}
 	
 		Thread.sleep(2000);
 		//driver.quit();

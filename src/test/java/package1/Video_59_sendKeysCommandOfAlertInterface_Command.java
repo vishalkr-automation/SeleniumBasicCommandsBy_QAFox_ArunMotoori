@@ -1,26 +1,17 @@
 package package1;
 
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Video_59_sendKeysCommandOfAlertInterface_Command {
 	
 	@Test(enabled=true)
 	public void f1() throws Exception {
-		
-		WebDriverManager.firefoxdriver().setup();
+	
 		WebDriver driver=new FirefoxDriver();
 		driver.manage().window().maximize();
 		
